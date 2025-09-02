@@ -1,4 +1,4 @@
-import type { DiaryEntryInput } from "../../types.js";
+import { Visibility, Weather, type DiaryEntryInput } from "../../types.js";
 import { CollectionSeeder } from "./collectionSeeder.js";
 
 const DB_USER = process.env.DB_USER ?? ''
@@ -8,8 +8,8 @@ const DB_NAME = process.env.DB_NAME ?? ''
 const diaries: DiaryEntryInput[] = [
     {
         date: '2025-08-27',
-        weather: 'cloudy',
-        visibility: 'good',
+        weather: Weather.Cloudy,
+        visibility: Visibility.Good,
         comment: 'Prueba del seed'
     }
 ]
