@@ -4,14 +4,10 @@ RUN npm install -g pnpm@latest-10
 
 WORKDIR /app
 
-COPY . /app
+COPY ./ /app
 
-RUN pnpm install
-
-ENV DB_NAME=$DB_NAME
-ENV DB_PASS=$DB_PASS
-ENV DB_USER=$DB_USER
+RUN pnpm install --production
 
 EXPOSE 3000
 
-CMD [ "pnpm", "run", "dev" ]
+CMD [ "pnpm", "run", "start" ]

@@ -7,11 +7,6 @@ app.use(express.json()) // Transforma req.body a json
 
 app.use('/api/diaries', diaryRouter)
 
-app.get('/ping', (_req, res) => {
-    console.log('Ping')
-    res.send(process.env.DB_USER)
-})
-
 const PORT = 3000
 
 app.listen(PORT, () => {
